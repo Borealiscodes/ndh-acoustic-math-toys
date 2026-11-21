@@ -1,27 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NDH Acoustic Math Toys &mdash; Balanced Ternary &amp; Euclidean Rhythm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="toy-column">
+    <header>
+      <h1>NDH Acoustic Math Toys</h1>
+      <p class="subtitle">Zero-Float Q16.16 &bull; Balanced Ternary {-1, 0, +1} &bull; 5-Cell Unicode Braille &bull; &le; 780 Hz Pentatonic Audio</p>
+    </header>
 
+    <section class="toy-card" aria-labelledby="toy1-heading">
+      <h2 id="toy1-heading">1. Balanced Ternary &amp; Q16.16 Acoustic Scale (-121 to +121)</h2>
+      <p>Flip each trit (<code>-1</code>, <code>0</code>, <code>+1</code>) using buttons or keys <strong>1&ndash;5</strong> (<strong>0</strong> resets) to hear the <code>D&ndash;E&ndash;G&ndash;A&ndash;B</code> harmonic mapping and inspect exact Q16.16 fixed-point ratios.</p>
+      <div id="ternary-braille" class="braille-display" aria-hidden="true">&#10304;&#10276;&#10276;&#10276;&#10276;</div>
+      <div id="trit-deck" class="btn-row" role="group" aria-label="Balanced Ternary Trits"></div>
+      <div class="btn-row">
+        <button id="btn-ternary-zero" type="button">Reset to Equilibrium (0 0 0 0 0) (Key 0)</button>
+      </div>
+      <div id="ternary-readout" class="readout" role="status" aria-live="polite"></div>
+    </section>
 
+    <section class="toy-card" aria-labelledby="toy2-heading">
+      <h2 id="toy2-heading">2. Euclidean &amp; Pentatonic Rhythm Mandala E(k, n)</h2>
+      <p>Distribute <strong>k</strong> pulses evenly across <strong>n</strong> steps using buttons or keys <strong>W/S</strong> (pulses) and <strong>A/D</strong> (steps), then press <strong>Space</strong> to hear Irish <em>Bodhr&aacute;n</em> and Japanese <em>Taiko</em> integer rhythms below 780 Hz.</p>
+      <div id="euc-braille" class="braille-display" aria-hidden="true">&#10423;&#10423;&#10423;&#10423;</div>
+      <div id="euc-cells" class="step-row" aria-hidden="true"></div>
+      <div class="btn-row">
+        <button id="btn-euc-play" type="button">&#9654; Play Euclidean Rhythm (Space)</button>
+        <button id="btn-pulse-dec" type="button">Pulses &minus; (S)</button>
+        <button id="btn-pulse-inc" type="button">Pulses + (W)</button>
+        <button id="btn-step-dec" type="button">Steps &minus; (A)</button>
+        <button id="btn-step-inc" type="button">Steps + (D)</button>
+      </div>
+      <div id="euc-readout" class="readout" role="status" aria-live="polite"></div>
+    </section>
+  </main>
 
-
-
-NDH Acoustic Math Toys — Balanced Ternary & Euclidean Rhythm
-NDH Acoustic Math Toys
-Zero-Float Q16.16 • Balanced Ternary {-1, 0, +1} • 5-Cell Unicode Braille • ≤ 780 Hz Pentatonic Audio
-1. Balanced Ternary & Q16.16 Acoustic Scale (-121 to +121)
-Flip each trit (-1, 0, +1) using buttons or keys 1–5 (0 resets) to hear the D–E–G–A–B harmonic mapping and inspect exact Q16.16 fixed-point ratios.
-⡤⠤⠤⠤⠤
-
-
-Reset to Equilibrium (0 0 0 0 0) (Key 0)
-
-2. Euclidean & Pentatonic Rhythm Mandala E(k, n)
-Distribute k pulses evenly across n steps using buttons or keys W/S (pulses) and A/D (steps), then press Space to hear Irish Bodhrán and Japanese Taiko integer rhythms below 780 Hz.
-⡷⡷⡷⡷
-
-
-▶ Play Euclidean Rhythm (Space)
-Pulses − (S)
-Pulses + (W)
-Steps − (A)
-Steps + (D)
-
-
+  <script type="module" src="src/toys-app.js"></script>
+</body>
+</html>
