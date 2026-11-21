@@ -118,7 +118,6 @@ export function initMathToysApp() {
 
   eucPlayBtn?.addEventListener("click", toggleEuclideanPlay);
   eucPulseDec?.addEventListener("click", () => { pulses = Math.max(0, pulses - 1); renderEuclidean(); });
-Use code with caution.
 eucPulseInc?.addEventListener("click", () => { pulses = Math.min(steps, pulses + 1); renderEuclidean(); });
 eucStepDec?.addEventListener("click", () => { steps = Math.max(2, steps - 1); renderEuclidean(); });
 eucStepInc?.addEventListener("click", () => { steps = Math.min(16, steps + 1); renderEuclidean(); });

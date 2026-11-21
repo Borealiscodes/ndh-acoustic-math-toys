@@ -48,9 +48,7 @@ export function computeEuclideanPattern(pulses, steps) {
   const k = Math.max(0, Math.min(n, pulses | 0));
   const pattern = Array.of();
   for (let i = 0; i < n; i += 1) {
-    const cur = Math.floor((i * k) / n);
-    const next = Math.floor(((i + 1) * k) / n);
-    pattern.push(next > cur ? 1 : 0);
+    pattern.push(((i * k) % n) < k ? 1 : 0);
   }
   return pattern;
 }
