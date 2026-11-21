@@ -1,0 +1,10 @@
+{
+  "name": "ndh-acoustic-math-toys",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Two zero-dependency, blind- and neurodivergent-accessible acoustic math toys distilling Q16.16 fixed-point arithmetic, balanced ternary {-1,0,+1}, 5-cell Unicode Braille, and <= 780 Hz Euclidean pentatonic synthesis.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT"
+}
